@@ -1,4 +1,4 @@
-# 파이썬 사용법
+# Python 사용법
 >[데이터 사이언스 스쿨](https://datascienceschool.net/intro.html)에서 공부한 내용을 기록합니다.
 
 파이썬은 다음 두 가지 방법으로 사용할 수 있다.
