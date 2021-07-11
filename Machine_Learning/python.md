@@ -79,6 +79,6 @@ C, C++, 자바 같은 언어는 새로운 라이브러리를 설치할 때 그 �
 
 ### pip를 사용하여 설치된 패키지를 확인하기
 pip 패키지 관리자를 사용할 때는 pip list 명령으로 설치된 패키지 목록을 볼 수 있다.
-![jpt05](./img/jpt05.png)
+![jpt05](https://user-images.githubusercontent.com/86659995/125183559-63883a80-e252-11eb-8319-6ec20e37bd53.PNG)
 
 
