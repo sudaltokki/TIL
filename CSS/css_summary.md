@@ -281,64 +281,94 @@ div {
 
 ## CSS 예제
 
-**`example1`** 디렉터리 안에  **`main.css`** 파일을 생성후 연결
+`example1` 디렉터리 안에  `main.css` 파일을 생성 후 연결합니다.
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <!-- 생략... -->
-  <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <title>GitHub</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="container-left clearfix">
+                <div class="logo">
+                    <img src="https://heropcode.github.io/GitHub-Responsive/img/logo.svg" alt="GitHub Logo">
+                </div>
+                <div class="menu clearfix"> <!--menu 와 clearfix 모두 class 별칭이다-->
+                    <div class="menu-item">Personal</div>
+                    <div class="menu-item">Open Source</div>
+                    <div class="menu-item">Business</div>
+                    <div class="menu-item">Explore</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
 ```
 
 ```css
 body {
-  /* 브라우저마다 기본 설정으로 BODY 요소에 margin과 padding의 값이 설정되어 있습니다. */
-  /* 각각의 브라우저마다 BODY 요소가 다른 값을 가지고 있을 수 있으므로 우리가 일정하게 초기화해서 사용합니다. */
-  /* 0은 단위를 사용하지 않습니다. */
-  margin: 0;
-  padding: 0;
-}
-.header {
-  /* 화면에는 다음의 값으로 랜더링 되어 있는데 여러 이유로(설명이 많이 필요합니다) 생략 가능합니다. */
-  /* width: 100%; */
-  /* height: 75px; */
-  background-color: white;
-  border-bottom: 1px solid lightgray; /* 요소테두리선-아래: 1px두께 가는실선 밝은회색; - header 하단에 회색의 선이 표시됩니다. */
-}
-.container {
-  /* height: 75px; */
-  width: 980px;
-  margin: auto; /* 요소바깥여백: 여백자동; - 이 속성과 값은 container를 수평 가운데 정렬하는 속성으로 쓰입니다. */
-}
-.container-left {
-  /* width: 370px; */
-  /* height: 75px; */
-  /* float: left; */
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.logo {
-  margin-right: 5px;
-  float: left; /* 수평정렬: 왼쪽부터차례대로; - logo와 menu를 수평 정렬하기 위해 사용되었습니다. 이 속성의 정확한 의미는 수평 정렬이 아니지만 쉽게 이해하도록 의역했습니다. */
-}
-.logo img { /* logo의 자식(후손) 요소인 img 태그 - 선택자에서 띄어쓰기는 자식(후손)요소를 의미합니다. */
-  display: block; /* 요소특성: 형태위주; - img(이미지) 하단에 생기는 불필요한 여백을 없애기 위해서 사용되었습니다. */
-}
-.menu {
-  float: left; /* logo와 menu를 수평 정렬하기 위해 사용되었습니다. */
-}
-.menu-item {
-  font-size: 16px;
-  padding: 8px 10px; /* padding-top: 8px; padding-bottom: 8px; padding-left: 10px; padding-right: 10px; 과 같습니다. */
-  float: left; /* 각 menu-item들을 수평 정렬하기 위해 사용되었습니다. */
-  line-height: 1; /* 줄 높이, 행간과 비슷한 개념으로 이해할 수 있습니다. 기본 값은 normal이며 이는 약 1.2배 정도입니다. 그대로 유지하면 .menu-item의 높이가 약 35px이 되기 때문에 1배로 수정하여 32px로 .logo의 크기와 동일하게 작업합니다. */
+    /* 브라우저마다 기본 설정으로 BODY 요소에 margin과 padding의 값이 설정되어 있습니다. */
+    /* 각각의 브라우저마다 BODY 요소가 다른 값을 가지고 있을 수 있으므로 우리가 일정하게 초기화해서 사용합니다. */
+    margin: 0;
+    padding: 0;
 }
 
-/* float: left; 를 사용하고 마무리할 때 필요한 코드입니다. */
-/* float: left;를 사용한 해당 HTML 요소의 부모 요소에게 class="clearfix"를 입력하여 CSS float 속성에서 발생하는 현상을 해제합니다. */
+.header {
+    width: auto; /*현재 가로의 길이는 100%*/
+    height: auto; /*높이는 (로고의 높이)+(메뉴의 높이)*/
+    /* 위 두 줄은 작성하지 않아도 기본값으로 설정되어 있습니다. */
+    background-color: white;
+    border-bottom: 1px solid lightgray; /*  header 하단에 회색의 선이 표시됩니다. */
+}
+
+.container {
+    width: 980px;
+    margin: auto;
+}
+
+.container-left {
+    padding: 20px 0;
+    /* 바깥쪽 좌우 여백을 설정해 container를 수평 가운데 정렬하는 속성으로 쓰입니다. */
+    /* padding값은 같은 효과를 볼 수 있는 요소 중 가장 최하위 요소에 적용하는 것이 좋습니다. */
+}
+
+.logo {
+    float: left; /* logo와 menu를 수평 정렬하기 위해 사용되었습니다. */
+    margin-right: 5px; 
+}
+
+.logo img {
+    /* logo의 자식 요소인 img 태그 - 선택자에서 띄어쓰기는 자식 요소를 의미합니다. */
+    display: block; /*이미지 하단에 생기는 불필요한 여백을 없애기 위하여 사용되었습니다.*/
+}
+
+.menu {
+    float: left; /* logo와 menu를 수평 정렬하기 위해 사용되었습니다. */
+}
+
+.menu-item {
+    float: left;
+    /* 각 menu-item들을 수평 정렬하기 위해 사용되었습니다. */
+    /* margin-right: 10px; item마다 오른쪽에 10px만큼 여백이 생깁니다.*/
+    padding: 8px 10px;
+    /* item마다 내부 여백을 설정해서 수직 정렬하기 위해 사용되었습니다. */
+    /* padding-top: 8px; padding-bottom: 8px; padding-left: 10px; padding-right: 10px; 과 같습니다. */
+}
+
 .clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+    /* float: left; 를 사용하고 마무리할 때 필요한 코드입니다. */
+    /* float: left;를 사용한 해당 HTML 요소의 부모 요소에게 class="clearfix"를 입력하여 CSS float 속성에서 발생하는 현상을 해제합니다. */
+    content: "";
+    display: block;
+    clear: both;
 }
 ```
