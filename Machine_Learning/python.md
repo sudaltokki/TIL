@@ -126,3 +126,79 @@ Matplotlib(맷플롯리브)패키지는 파이썬에서 각종 그래프나 차�
 Seaborn(시본)패키지는 Matplotlib 패키지에서 지원하지 않는 고급 통계 차트를 그리는 통계용 시각화 기능을 제공한다.
 
 > 아나콘다 배포판을 설치하면 NumPy, SciPy, SymPy, Matplotlib, Seaborn 등은 자동으로 설치된다. 아나콘다 배포판을 사용하지 않는 경우에는 pip나 conda를 사용하여 직접 설치할 수 있다.
+
+## 아이파이썬 및 주피터 설정
+아이파이썬과 주피터 노트북을 사용할 때 사용자의 편의를 위해 사용자 설정(user customization)을 하는 방법
+
+### 프로필 작성
+아이파이썬 또는 주피터 관련 설정을 하려면 프로필(profile)이 필요하다. 프로필은 다음 위치에 저장된다.   
+`사용자홈디렉터리/.ipython/profile_default/`
+
+만약 이 프로필 디렉터리가 없다면 터미널에서 다음 명령으로 만들 수 있다.
+```
+ipython profile create
+```
+
+### 사용자 설정 파일
+사용자 설정은 스타트업 파일과 ipython_config.py 파일을 이용하며 설정 내용은 모든 아이파이썬과 주피터 노트북에 공통으로 적용된다.
+
+* **스타트업 파일**
+스타트업 파일은 아이파이썬과 주피터 노트북을 이용한 콘솔이 시작되기 전에 실행되는 파일이다. 스타트업 파일은 따로 정해진 이름이 있는 것이 아니라 startup 폴더 아래의 .py 확장자를 가진 모든 파이썬 스크립트가 스타트업 파일이며 파일 이름의 알파벳 순서로 실행된다.
+
+이 책에서는 매번 주피터 노트북을 실행할 때마다 반복해서 패키지 임포트 명령을 치지 않아도 되도록 자주 사용되는 패키지를 미리 임포트한다.
+
+스타트업 파일이 있는 디렉터리는 다음과 같다.
+`사용자홈디렉터리/.ipython/profile_default/startup/`
+
+보통 가장 먼저 실행되어야 하는 파일 이름을 00.py, 그 다음으로 실행되는 파일 이름을 01.py과 같이 설정한다.  
+이 디렉터리에 00.py이라는 이름으로 파일을 하나 만들고 다음과 같이 내용을 입력하여 저장한다.
+
+```python
+# 경고 무시
+import warnings
+warnings.simplefilter('ignore')
+
+# 자주 사용하는 패키지를 임포트
+import matplotlib as mpl
+import matplotlib.pylab as plt
+from mpl_toolkits.mplot3d import Axes3D
+import seaborn as sns
+import numpy as np
+import scipy as sp
+import pandas as pd
+import statsmodels.api as sm
+import sklearn as sk
+
+# matplotlib 설정
+mpl.use('Agg')
+
+# seaborn 설정
+sns.set()
+sns.set_style("whitegrid")
+sns.set_color_codes()
+```
+
+이 스타트업 파일이 정상 실행되려면 임포트할 패키지가 미리 설치되어 있어야 한다. 따라서 위 스타업 파일에서 임포트하는 다음 패키지가 설치되어 있는지 conda list 명령으로 확인하고 만약 설치되어 있지 않다면 패키지를 설치한다.
+
+* **ipython_config.py 설정 파일**
+일부 파이썬 명령은 하나의 스크립트 안에서만 실행되므로 스타트업 파일에 적어 놓아도 실제 아이파이썬 콘솔에는 적용되지 않는다. 예를 들어 mpl.rc 계열의 임포트 명령은 하나의 스크립트 안에서만 영향을 미친다. 이때는 ipython_config.py 설정 파일 안에서 c.InteractiveShellApp.exec_lines 설정 항목을 다음처럼 지정하면 된다. 이 항목은 파이썬이 시작한 직후 스스로 실행할 명령어로 이루어진 문자열 목록이다.
+
+다음은 ipython_config.py 설정 파일의 예다.
+
+```
+c = get_config()
+
+c.InteractiveShellApp.exec_lines = [
+    "mpl.rc('font', family='NanumGothic')",  # 나눔고딕 폰트 사용
+    "mpl.rc('axes', unicode_minus=False)", # 유니코드 음수 기호 사용
+    "mpl.rc('figure', figsize=(8, 5))",  # 그림 크기 (단위: 인치)
+    "mpl.rc('figure', dpi=300)",  # 그림 해상도
+]
+```
+
+맷플롯리브(Matplotlib) 패키지로 그림을 그릴 때 나눔고딕 폰트를 사용하므로 그에 맞도록 설정했다.  
+이 파일이 정상 실행되려면 나눔고딕 폰트가 미리 설치되어 있어야 한다. 나눔고딕 폰트는 다음 웹페이지에서 내려받을 수 있다.
+
+[나눔고딕 폰트 설치](https://hangeul.naver.com/font)
+
+이제부터 나오는 모든 파이썬 예제 코드는 스타트업 파일과 ipython_config.py 설정 파일이 앞에서 작성한 대로 설정되어 있다는 가정하에 작성한다.
