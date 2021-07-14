@@ -1,5 +1,5 @@
-# Python 사용법
->[데이터 사이언스 스쿨](https://datascienceschool.net/intro.html)에서 공부한 내용을 기록합니다.
+# Python 설치와 설정
+>[데이터 사이언스 스쿨](https://datascienceschool.net/01%20python/01.00%201%EC%9E%A5%20%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%84%A4%EC%B9%98%EC%99%80%20%EC%84%A4%EC%A0%95.html)에서 공부한 내용을 기록합니다.
 
 파이썬은 다음 두 가지 방법으로 사용할 수 있다.
 1. 콘솔이나 주피터 노트북을 사용한 REPL(Read–Eval–Print Loop) 방식
