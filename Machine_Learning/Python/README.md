@@ -6,4 +6,5 @@
 ### 2장 파이썬 기초 문법  
   * 2.1 [파이썬을 계산기로 사용하기](./2.1_python_calculator.md)  
   * 2.2 [부동소수점 실수 자료형](./2.2_python_datatype.md)
+  * 2.3 [파이썬으로 글자를 출력하기](./2.3_python_print.md)
   
