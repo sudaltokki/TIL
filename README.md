@@ -6,6 +6,6 @@
 * [CSS 개요](./CSS/css_summary.md)
 
 ### Machine Learning
-* [Python 사용법](./Machine_Learning/Python)
+* [Python](./Machine_Learning/Python)
 
 
