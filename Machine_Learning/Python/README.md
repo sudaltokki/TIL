@@ -1,5 +1,5 @@
 # Python 
->[데이터 사이언스 스쿨](https://datascienceschool.net/intro.html)에서 공부한 내용을 기록합니다
+>[데이터 사이언스 스쿨](https://datascienceschool.net/intro.html)에서 공부한 내용을 정리합니다.
 
 ### 1장 [파이썬 설치와 설정](./1_python_setting.md)  
 
