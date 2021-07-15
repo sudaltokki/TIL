@@ -9,3 +9,4 @@
   * 2.3 [파이썬으로 글자를 출력하기](./2.3_python_print.md)
   * 2.4 [파이썬의 문자열 형식화](./2.4_python_stringformatting.md)
   * 2.5 [파이썬 조건문 기초](.2.5_python_ifelse.md)
+  * 2.6 [파이썬 함수](./2.6_python_function.md)
