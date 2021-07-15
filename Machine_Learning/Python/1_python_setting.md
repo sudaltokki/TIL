@@ -186,7 +186,7 @@ sns.set_color_codes()
 
 다음은 ipython_config.py 설정 파일의 예다.
 
-```
+```python
 c = get_config()
 
 c.InteractiveShellApp.exec_lines = [
