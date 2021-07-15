@@ -10,3 +10,4 @@
   * 2.4 [파이썬의 문자열 형식화](./2.4_python_stringformatting.md)
   * 2.5 [파이썬 조건문 기초](./2.5_python_ifelse.md)
   * 2.6 [파이썬 함수](./2.6_python_function.md)
+  * 2.7 [파이썬 for 반복문](./2.7_python_for.md)
