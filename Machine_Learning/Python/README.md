@@ -8,3 +8,4 @@
   * 2.2 [부동소수점 실수 자료형](./2.2_python_datatype.md)
   * 2.3 [파이썬으로 글자를 출력하기](./2.3_python_print.md)
   * 2.4 [파이썬의 문자열 형식화](./2.4_python_stringformatting.md)
+  * 2.5 [파이썬 조건문 기초](.2.5_python_ifelse.md)
