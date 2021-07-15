@@ -12,3 +12,4 @@
   * 2.6 [파이썬 함수](./2.6_python_function.md)
   * 2.7 [파이썬 for 반복문](./2.7_python_forloop.md)
   * 2.8 [여러 개의 자료를 한 변수에 담기](./2.8_python_indexing.md)
+  * 2.9 [파이썬에서 리스트 자료형 다루기](./2.9_python_list.md)
