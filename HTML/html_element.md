@@ -645,3 +645,718 @@ ins { display: inline; }
 ```
 
 MDN / W3Schools
+
+---
+
+## 멀티미디어
+
+### \<img />
+
+이미지를 삽입
+
+| 속성 | 의미 |	값 |
+|------|------|----|
+| src |	(필수)이미지 URL |	URL	|
+| alt	| (필수)이미지의 대체텍스트 |	
+| width |	이미지의 가로 너비 |	
+| height | 이미지의 세로 너비 |	
+| srcset |	브라우저에게 제시할 이미지 URL과 원본 크기의 목록을 정의 |	w, x |
+| sizes |	미디어 조건과 해당 조건일 때 이미지 최적화 크기의 목록을 정의 |
+
+```html
+<!-- srcset, sizes -->
+<!-- 다양한 디스플레이 해상도에 맞는 최적의 이미지를 브라우저가 선택해서 사용 -->
+<img srcset="./small.jpg 320w,
+             ./medium.jpg 640w,
+             ./large.jpg 1024w"
+     sizes="(max-width: 480px) 300px,
+            (max-width: 800px) 600px,
+            900px"
+     src="./small.jpg"
+     alt="The image" />
+<img srcset="./image.jpg,
+             ./image-1.5x.jpg 1.5x,
+             ./image-2x.jpg 2x"
+     src="./image.jpg"
+     alt="The image" />
+```
+
+```html
+img { display: inline; }
+```
+
+MDN / W3Schools
+
+---
+
+HTML IMG의 srcset과 sizes 속성  
+Responsive images for srcset and sizes
+
+### \<audio>
+소리 콘텐츠(MP3)를 삽입  
+autoplay가 지정된 경우, preload는 무시됨.
+
+| 속성 | 의미 |	값 |	기본값 |
+|------|------|----|--------|
+| autoplay | 준비되면 바로 재생 |	불린(Boolean) |	
+| controls | 제어 메뉴를 표시 | 불린(Boolean) |	
+| loop | 재생이 끝나면 다시 처음부터 재생 |	불린(Boolean) |	
+| preload |	페이지가 로드될 때 파일을 로드할지의 지정 (힌트 제공) | none: 로드하지 않음  metadata: 메타데이터만 로드  auto: 전체 파일 로드	| metadata |
+| src |	콘텐츠 URL |	URL |	
+| muted |	음소거 여부 | 불린(Boolean) |	
+
+```
+audio { display: inline; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<video>
+동영상 콘텐츠(MP4)를 삽입  
+
+autoplay가 지정된 경우, preload는 무시됨
+
+| 속성 | 의미 |	값 |	기본값 |
+|------|------|----|--------|
+| autoplay | 준비되면 바로 재생 |	불린(Boolean) |	
+| controls | 제어 메뉴를 표시 | 불린(Boolean) |	
+| loop | 재생이 끝나면 다시 처음부터 재생 |	불린(Boolean) |	
+| muted |	음소거 여부 | 불린(Boolean) |	
+| poster | 동영상 썸네일 이미지 URL | URL |	
+| preload |	페이지가 로드될 때 파일을 로드할지의 지정 (힌트 제공) |	none: 로드하지 않음, metadata: 메타데이터만 로드, auto: 전체 파일 로드 | metadata |
+| src |	콘텐츠 URL |	URL |	
+| width |	동영상 가로 너비 | 		
+| height | 동영상 세로 너비 |
+
+```
+video { display: inline; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<figure>, \<figcaption>
+`\<figure>`는 이미지나 삽화, 도표 등의 영역을 설정.
+`\<figcaption>`는 `\<figure>`에 포함되어 이미지나 삽화 등의 설명을 표시.(Figure Caption)
+
+```
+<figure>
+  <img src="milk.jpg" alt="A milk">
+  <figcaption>Milk is a nutrient-rich, white liquid food produced by the mammary glands of mammals.</figcaption>
+</figure>
+```
+```
+figure { display: block; }
+figcation { display: inline; }
+```
+
+FIGURE: MDN / W3Schools  
+FIGCAPTION: MDN / W3Schools
+
+---
+
+## 내장 콘텐츠
+
+### \<iframe>
+다른 HTML 페이지를 현재 페이지에 삽입 (중첩된 브라우저 컨텍스트(프레임)를 표시)
+
+| 속성 | 의미 |	값 |	기본값 |
+|------|------|----|--------|
+| name | 프레임의 이름 |		
+| src |	포함할 문서의 URL |	URL |	
+| width |	프레임의 가로 너비 |		
+| height | 프레임의 세로 너비	|	
+| allowfullscreen |	전체 화면 모드 사용 여부 | 불린(Boolean) |	
+| frameborder |	프레임 테두리 사용 여부 |	0, 1 | 1 |
+| sandbox |	보안을 위한 읽기 전용으로 삽입 |	불린(Boolean) or allow-form: 양식 제출 가능, allow-scripts: 스크립트 실행 가능 , allow-same-origin: 같은 출처(도메인)의 리소스 사용 가능 |
+
+```
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Q9yn1DpZkHQ" frameborder="0" allowfullscreen></iframe>
+```
+
+```
+iframe { display: inline; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<canvas>
+Canvas API이나 WebGL API를 사용하여 그래픽이나 애니메이션을 랜더링
+
+| 속성 | 의미 |
+|------|------|
+| width |	캔버스의 가로 너비 |
+| height | 캔버스의 세로 너비 |
+
+```
+canvas { display: inline; }
+```
+
+MDN / W3Schools
+
+---
+
+## 스크립트
+
+### \<script>
+스크립트 코드를 문서에 포함하거나 참조 (외부 스크립트)
+
+| 속성 | 의미 |	값 | 특징 |
+|------|------|----|------|
+| async |	스크립트의 비동기적(Asynchronously) 실행 여부 | 불린(Boolean) | src 속성 필수 |
+| defer |	문서 파싱(구문 분석) 후 작동 여부 | 불린(Boolean) | src 속성 필수 |
+| src |	참조할 외부 스크립트 URL |	URL |	포함된 스크립트 코드는 무시됨 |
+| type | MIME 타입 | text/javascript (기본값) |	
+
+```
+script { display: none; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<noscript>
+스크립트를 지원하지 않는 경우에 삽입할 HTML을 정의
+
+```
+<noscript>
+  <p>Your browser does not support JavaScript!</p>
+</noscript>
+```
+
+```
+noscript { display: inline; }
+```
+
+MDN / W3Schools
+
+---
+
+## 표 콘텐츠
+
+```
+<table>
+  <caption>Fruits</caption>
+  <colgroup>
+    <col span="2" style="background-color: yellowgreen;">
+    <col style="background-color: tomato;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F123A</td>
+      <td>Apple</td>
+      <td>$22</td>
+    </tr>
+    <tr>
+      <td>F098B</td>
+      <td>Banana</td>
+      <td>$19</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+---
+
+### \<table>, \<tr>, \<th>, \<td>
+데이터 표(`\<table>`)의 행(줄 / `\<tr>`)과 열(칸, 셀(Cell) / `\<th>`, `\<td>`)을 생성  
+(Table Row, Table Header, Table Data)
+
+```
+table { display: table; }
+tr { display: table-row; }
+th, td { display: table-cell; }
+```
+
+TABLE: MDN / W3Schools  
+TR: MDN / W3Schools  
+TH: MDN / W3Schools  
+TD: MDN / W3Schools  
+
+---
+
+### \<th>
+‘머리글 칸’을 지정
+
+| 속성 | 의미 |	값 |	기본값 |
+|------|------|----|--------|
+| abbr | 열에 대한 간단한 설명 |		
+| headers |	관련된 하나 이상의 다른 머리글 칸 id 속성 값 |		
+| colspan |	확장하려는(병합) 열의 수 | 1 |
+| rowspan |	확장하려는(병합) 행의 수 | 1 |
+| scope |	자신이 누구의 ‘머리글 칸’인지 명시 | col: 자신의 열  colgroup: 모든 열  row: 자신의 행  rowgroup: 모든 행 auto | auto |-
+
+---
+
+### \<td>
+‘일반 칸’을 지정
+
+| 속성 | 의미 |	값 |	기본값 |
+|------|------|----|--------|
+| headers |	관련된 하나 이상의 다른 머리글 칸 | id 속성 값 |		
+| colspan |	확장하려는(병합) 열의 수 | | 1 |
+| rowspan |	확장하려는(병합) 행의 수 | | 1 |
+
+---
+
+### \<caption>
+표의 제목을 설정  
+열리는 TABLE 태그 바로 다음에 작성해야 함  
+`\<table>` 당 하나의 `\<caption>`만 사용 가능
+
+```
+caption { display: table-caption; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<colgroup>, \<col />
+표의 열들을 공통적으로 정의하는 컬럼(`\<col>`)과 그의 집합(`\<colgroup>`) (Column, Column Group)
+
+| 속성 | 의미 |	값 |	기본값 |
+| span | 연속되는 열 수 |	숫자(Number) | 1 |
+
+```
+colgroup { display: table-column-group; }
+col { display: table-column; }
+```
+
+COLGROUP: MDN / W3Schools  
+COL: MDN / W3Schools
+
+---
+
+### \<thead>, \<tbody>, \<tfoot>
+표의 머리글(`\<thead>`), 본문(`\<tbody>`), 바닥글(`\<tfoot>`)을 지정  
+기본적으로 테이블의 레이아웃에 영향을 주지 않음
+
+```
+thead { display: table-header-group; }
+tbody { display: table-row-group; }
+tfoot { display: table-footer-group; }
+```
+
+THEAD: MDN / W3Schools  
+TBODY: MDN / W3Schools  
+TFOOT: MDN / W3Schools
+
+---
+
+## 양식
+
+### \<form>
+웹 서버에 정보를 제출하기 위한 양식 범위를 정의  
+\<form>이 다른 \<form>을 자식 요소로 포함할 수 없음
+  
+| 속성 | 의미 |	값 |	기본값 |
+|------|------|----|--------|
+| action | 전송한 정보를 처리할 웹페이지의 URL | URL |	
+| autocomplete | 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부 | on, off | on |
+| method | 서버로 전송할 HTTP 방식 | GET, POST | GET |
+| name | 고유한 양식의 이름 |		
+| novalidate | 서버로 전송시 양식 데이터의 유효성을 검사하지 않도록 지정 |		
+| target | 서버로 전송 후 응답받을 방식을 지정 |	_self, _blank |	_self |
+
+```  
+form { display: block; }
+```
+MDN / W3Schools
+
+---
+
+### \<input />
+사용자에게 입력 받을 데이터 양식
+
+| 속성 | 의미 |	값 | 기본값 |	특징 |
+| autocomplete | 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부 | on, off | on |	
+| autofocus |	페이지가 로드될 때 자동으로 포커스 |	불린(Boolean) | | 문서 내 고유해야 함 |
+| checked |	양식이 선택되었음을 표시	| 불린(Boolean) | | type 속성 값이 radio, checkbox일 경우만 |
+| disabled | 양식을 비활성화 |	불린(Boolean) |		
+| form | \<form>의 id 속성 값 | | | 해당 \<form>의 후손이 아닐 경우만 |
+| list | 참조할 \<datalist>의 id 속성 값 |			
+| max	| 지정 가능한 최대 값	| 숫자(Number) | | type 속성 값이 number일 경우만, min속성보다 큰 값만 허용 |
+| min	| 지정 가능한 최소 값	| 숫자(Number) | | type 속성 값이 number일 경우만, max속성보다 작은 값만 허용 |
+| maxlength	|입력 가능한 최대 문자 수	| 숫자(Number) | 524288 | type 속성 값이 text, email, password, tel, url일 경우만 |
+| multiple | 둘 이상의 값을 입력 할 수 있는지 여부 |	불린(Boolean) |	type 속성 값이 email, file일 경우만, email일 경우 ,로 구분 |
+| name | 양식의 이름 |			
+| placeholder |	사용자가 입력할 값의 힌트 | | | type 속성 값이 text, search, tel, url, email일 경우만 |
+| readonly | 수정 불가한 읽기 전용 |	불린(Boolean) |		
+| step | 유효한 증감 숫자의 간격 | 숫자(Number) |	1 |	type 속성 값이 number, range일 경우만 |
+| src	| 이미지의 URL | URL | | type 속성 값이 image일 경우만 |
+| alt |	이미지의 대체 텍스트 |	| type 속성 값이 image일 경우만 |
+| type | 입력 받을 데이터의 종류 | 별도 정리 | text |
+| value |	양식의 초기 값 |			
+
+---
+  
+## 데이터 종류(Type)의 값(Values)
+type속성에 입력할 수 있는 값의 목록
+
+```
+<input type="button" />
+<input type="checkbox" />
+<input type="file" />
+<input type="text" />
+```
+
+| 값	| 데이터 종류 | 특징 |
+|----|-------------|------|
+button	일반 버튼	\<button>처럼 사용
+checkbox	체크박스	
+color	색상	IE 지원 불가
+email	이메일	
+file	파일	
+hidden	보이지 않지만 전송할 양식	value 속성으로 값을 지정
+image	이미지 제출 버튼	\<img />처럼 사용
+number	숫자	
+password	비밀	가려지는 양식
+radio	라디오 버튼	같은 name 속성 그룹 내 하나만 선택 가능
+range	범위 컨트롤	min, max, step, value(기본값) 속성 사용
+reset	초기화	해당 \<form> 범위 내 모든 양식
+search	검색	
+submit	제출 버튼	해당 \<form> 범위 내 고유한 양식
+tel	전화번호	
+text	일반 텍스트	
+url	절대 URL	
+  
+```
+input { display: inline-block; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<label>
+라벨 가능 요소(labelable)의 제목(Caption)  
+for 속성으로 라벨 가능 요소를 참조하거나 콘텐츠로 포함
+
+라벨 가능 요소: \<button>, \<input>, \<progress>, \<select>, \<textarea>
+
+| 속성 | 의미 |
+|------|------|
+| for | 참조할 라벨 가능 요소의 id 속성 값 |
+
+
+```
+<!-- 라벨 가능 요소를 참조 -->
+<input type="checkbox" id="user-agreement" />
+<label for="user-agreement">동의하십니까?</label>
+
+<!-- 라벨 가능 요소를 포함 -->
+<label><input type="checkbox" />동의하십니까?</label>
+```
+```
+label { display: inline; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<button>
+선택 가능한 버튼을 지정
+
+속성	의미	값	특징
+autofocus	페이지가 로드될 때 자동으로 포커스	불린(Boolean)	문서 내 고유해야 함
+disabled	버튼을 비활성화	불린(Boolean)	
+form	\<form>의 id 속성 값		해당 \<form>의 후손이 아닐 경우만
+name	폼 데이터와 함께 전송되는 버튼의 이름		
+type	버튼의 타입	button, reset, submit	
+
+```
+button { display: inline-block; }
+```
+
+MDN / W3Schools
+
+---
+
+### \<textarea>
+여러 줄의 일반 텍스트 양식
+
+속성	의미	값	기본값	특징
+autocomplete	사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부	on, off	on	
+autofocus	페이지가 로드될 때 자동으로 포커스	불린(Boolean)		문서 내 고유해야 함
+disabled	양식을 비활성화	불린(Boolean)		
+form	\<form>의 id 속성 값			해당 \<form>의 후손이 아닐 경우만
+maxlength	입력 가능한 최대 문자 수	숫자(Number)	무한	
+name	양식의 이름			
+placeholder	사용자가 입력할 값의 힌트			
+readonly	수정 불가한 읽기 전용	불린(Boolean)		
+rows	양식의 줄 수	숫자(Number)	2	
+  
+```
+textarea { display: inline-block; }
+```
+  
+MDN / W3Schools
+
+---
+
+### \<fieldset>, \<legend>
+같은 목적의 양식을 그룹화(`\<fieldset>`)하여 제목(`\<legend>`)을 지정.
+
+```
+<form>
+  <fieldset>
+    <legend>Coffee Size</legend>
+    <label>
+        <input type="radio" name="size" value="tall" />
+        Tall
+    </label>
+    <label>
+        <input type="radio" name="size" value="grande" />
+        Grande
+    </label>
+    <label>
+        <input type="radio" name="size" value="venti" />
+        Venti
+    </label>
+  </fieldset>
+</form>
+```
+```
+fieldset, legend { display: block; }
+```
+
+FIELDSET: MDN / W3Schools  
+LEGEND: MDN / W3Schools
+
+---
+
+### \<fieldset>
+같은 목적의 양식을 그룹화
+
+속성	의미	값
+disabled	그룹 내 모든 양식 요소를 비활성화	불린(Boolean)	
+form	그룹이 속할 하나 이상의 \<form>의 id 속성 값	
+name	그룹의 이름	
+\<select>, \<datalist>, \<optgroup>, \<option>
+옵션(\<option>, \<optgroup>)의 선택 메뉴(\<select>)나 자동완성(\<datalist>)을 제공.
+
+```
+<select>
+  <optgroup label="Coffee">
+    <option>Americano</option>
+    <option>Caffe Mocha</option>
+    <option label="Cappuccino" value="Cappuccino"></option>
+  </optgroup>
+  <optgroup label="Latte" disabled>
+    <option>Caffe Latte</option>
+    <option>Vanilla Latte</option>
+  </optgroup>
+  <optgroup label="Smoothie">
+    <option>Plain</option>
+    <option>Strawberry</option>
+    <option>Banana</option>
+    <option>Mango</option>
+  </optgroup>
+</select>
+```
+```
+select { display: inline-block; }
+datalist { display: none; }
+optgroup, option { display: block; }
+```
+
+SELECT: MDN / W3Schools  
+DATALIST: MDN / W3Schools  
+OPTGROUP: MDN / W3Schools  
+OPTION: MDN / W3Schools
+
+---
+
+### \<select>
+옵션을 선택하는 메뉴
+
+속성	의미	값	기본값
+autocomplete	사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부	on, off	on	
+disabled	선택 메뉴를 비활성화	불린(Boolean)	
+form	선택 메뉴가 속할 하나 이상의 \<form>의 id 속성 값		
+multiple	다중 선택 여부	불린(Boolean)	
+name	선택 메뉴의 이름		
+size	한 번에 볼 수 있는 행의 개수	숫자(Number)	0(1과 같음)
+
+---
+
+### \<datalist>
+`\<input>`에 미리 정의된 옵션을 지정하여 자동완성(Autocomplete) 기능을 제공하는 데 사용.
+
+`\<input>`의 list 속성 바인딩.
+`\<option>` 을 포함하여 정의된 옵션을 지정.
+
+```
+<input type="text" list="fruits">
+
+<datalist id="fruits">
+  <option>Apple</option>
+  <option>Orange</option>
+  <option>Banana</option>
+  <option>Mango</option>
+  <option>Fineapple</option>
+</datalist>
+```
+
+---
+
+### \<optgroup>
+`\<option>`을 그룹화
+
+속성	의미	값
+label	(필수)옵션 그룹의 이름	
+disabled	옵션 그룹을 비활성화	불린(Boolean)
+
+---
+
+### \<option>
+선택 메뉴(`\<select>`)나 자동완성(`\<datalist>`)에서 사용될 옵션  
+선택적 빈(Empty) 태그로 사용 가능
+
+속성	의미	값	특성
+disabled	옵션을 비활성화	불린(Boolean)	
+label	표시될 옵션의 제목		생략되면 포함된 텍스트를 표시
+selected	옵션이 선택되었음을 표시	불린(Boolean)	
+value	양식으로 제출될 값		생략되면 포함된 텍스트를 값으로 사용
+
+---
+
+### \<progress>
+작업의 완료 진행률을 표시.
+
+속성	의미	값	특징
+max	작업의 총량	숫자(Number)	
+value	작업의 진행량	숫자(Number)	max 속성을 생략할 경우 0~1 사이의 숫자여야 함
+
+```
+<progress value="70" max="100">70 %</progress>
+```
+```
+progress { display: inline-block; }
+```
+
+MDN / W3Schools
+
+---
+
+## 전역 속성(Global Attributes)
+모든 HTML 요소에서 공통적으로 사용 가능한 속성
+
+### class
+공백으로 구분된 요소의 별칭을 지정.  
+CSS 혹은 JavaScript의 요소 선택기(CSS 선택자나 GetElementsByClassName, QuerySelectorAll 같은)를 통해서 요소를 선택하거나 접근.
+
+MDN / W3Schools
+
+---
+
+### id
+문서에서 고유한 식별자(idenifier, ID)를 정의.  
+CSS 혹은 JavaScript의 요소 선택기(CSS 선택자나 GetElementsByClassName, QuerySelectorAll 같은)를 통해서 요소를 선택하거나 접근.
+
+MDN / W3Schools
+
+---
+
+### style  
+요소에 적용할 CSS를 선언.
+
+MDN / W3Schools
+
+---
+
+### title
+요소의 정보(설명)을 지정.
+
+MDN / W3Schools
+
+---
+
+### lang
+요소의 언어(ISO 639-1)를 지정.
+
+```
+<p lang="en">This paragraph is English</p>
+<p lang="ko">이 단락은 한글입니다.</p>
+<p lang="fr">Ce paragraphe est défini en français.</p>
+```
+
+MDN / W3Schools
+
+---
+
+### data-*
+사용자 정의 데이터 속성을 지정.  
+HTML에 JavaScript에서 이용할 수 있는 데이터(정보)를 저장하는 용도로 사용.
+
+```
+<!-- data-custom-data-attributes -->
+<div id="me" data-my-name="Heropy" data-my-age="851">Heropy</div>
+// dataset.customDataAttributes
+const $me = document.getElementById('me');
+console.log($me.dataset.myName); // "Heropy"
+console.log($me.dataset.myAge); // "851"
+```
+
+MDN / W3Schools
+
+---
+
+### draggable
+요소가 Drag and Drop API를 사용 가능한지 여부를 지정.
+
+```
+<div draggable="true">The element to drag.</div>
+```
+
+MDN / W3Schools
+
+---
+
+### hidden
+요소를 숨김.
+
+```
+<form id="hidden-form" action="/form-action" hidden>
+  <!-- 숨겨진 양식들.. -->
+</form>
+<button form="hidden-form" type="submit">전송</button>
+```
+
+MDN / W3Schools
+
+---
+
+### tabindex
+Tab키를 이용해 요소를 순차적으로 포커스 탐색할 순서를 지정.
+
+대화형 콘텐츠(Interactive Content)는 기본적으로 코드 순서대로 탭 순서가 지정됨.  
+비대화형 콘텐츠에 tabindex="0"을 지정하여 대화형 콘텐츠와 같이 탭 순서를 사용.  
+tabindex="-1"을 통해 포커스는 가능하지만 탭 순서에서 제외 가능.  
+tabindex="1" 이상의 양수 값은 논리적 흐름을 방해하기 때문에 사용을 추천하지 않음.  
+
+```
+<h1 tabindex="0">Sign In</h1>
+<label>Username: <input type="text"></label>
+<label>Password: <input type="password"></label>
+<label>PS: <input type="text" tabindex="-1"></label>
+<input type="submit" value="Sign In">
+```
+
+MDN / W3Schools  
+Using the tabindex attribute
