@@ -16,3 +16,4 @@
   * 2.10 [리스트와 반복문을 사용하여 계산하기](./2.10_python_enumerate.md)
   * 2.11 [파이썬에서 딕셔너리 자료형 다루기](./2.11_python_dictionary.md)
   * 2.12 [파이썬 객체지향 프로그래밍](./2.12_python_object.md)
+  * 2.13 [파이썬 패키지 사용하기](./2.13_python_package.md))
