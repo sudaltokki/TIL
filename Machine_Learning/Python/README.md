@@ -5,7 +5,7 @@
 
 ### 2장 파이썬 기초 문법  
   * 2.1 [파이썬을 계산기로 사용하기](./2.1_python_calculator.md)  
-  * 2.2 [부동소수점 실수 자료형](./2.2_python_datatype.md)
+  * 2.2 [부동소수점 실수 자료형](./2.2_python_realnumber.md)
   * 2.3 [파이썬으로 글자를 출력하기](./2.3_python_print.md)
   * 2.4 [파이썬의 문자열 형식화](./2.4_python_stringformatting.md)
   * 2.5 [파이썬 조건문 기초](./2.5_python_ifelse.md)
@@ -17,5 +17,5 @@
   * 2.11 [파이썬에서 딕셔너리 자료형 다루기](./2.11_python_dictionary.md)
   * 2.12 [파이썬 객체지향 프로그래밍](./2.12_python_object.md)
   * 2.13 [파이썬 패키지 사용하기](./2.13_python_package.md)
-  * 2.14 [파이썬의 자료형](./2.14_python_package.md)
-  * 2.15 [파이썬에서 날짜와 시간 다루기](./2.15_python_package.md)
+  * 2.14 [파이썬의 자료형](./2.14_python_datatype.md)
+  * 2.15 [파이썬에서 날짜와 시간 다루기](./2.15_python_time.md)
