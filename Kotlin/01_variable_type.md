@@ -9,7 +9,7 @@
 
 ## 변수 선언 방법 (1)
 
-```
+```kotlin
 var/val 변수명 = 값
 ```
 
@@ -49,7 +49,7 @@ fun main(args:Array<String>){
 
 ## 변수 선언 방법 (2)
 
-```
+```kotlin
 var/val 변수명: 자료형 = 값
 ```
 
