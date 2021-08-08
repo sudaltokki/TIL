@@ -50,7 +50,7 @@ fun main(args:Array<String>){
 ## 변수 선언 방법 (2)
 
 ```
-var/val 변수명 : 자료형 = 값
+var/val 변수명: 자료형 = 값
 ```
 
 Kotlin은 자료형을 정해주지 않으면 대입한 값을 보고 자료형을 판단한다.
