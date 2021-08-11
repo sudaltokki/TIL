@@ -49,22 +49,63 @@ println(numberMap.get("one"))
 > 값을 변경할 수 있다.  
 > mutable컬렉션Of<자료형>(값1, 값2, ...)
 
+### Mutable List
+> .add(i, 값), .set(i, 값), .removeAt(i)
+ 
 ```kotlin
-val mNumberList = mutableListOf<Int>(1, 2, 3) // 변경 가능한 List
-mNumberList.add(3, 4)
-println(mNumberList)
-
-val mNumberSet = mutableSetOf<Int>(1, 2, 3, 4, 4, 4) // 변경 가능한 Set
-mNumberSet.add(10)
-println(mNumberSet)
-
-val mNumberMap = mutableMapOf<String, Int>("one" to 1) // 변경 가능한 Map
-mNumberMap.put("two", 2)
-println(mNumberMap)
-}
-
+    val a = mutableListOf<Int>(1, 2, 3)
+    a.add(4)
+    println(a)
+    a.add(0, 100)
+    println(a)
+    a.set(0, 200)
+    println(a)
+    a.removeAt(1)
+    println(a)
+```
 ```
 [1, 2, 3, 4]
-[1, 2, 3, 4, 10]
+[100, 1, 2, 3, 4]
+[200, 1, 2, 3, 4]
+[200, 2, 3, 4]
+```
+### Mutable Set
+> .add(값), .remove(값)
+
+```kotlin
+    val b = mutableSetOf<Int>(1, 2, 3, 4)
+    println()
+    b.add(2)
+    println(b)
+    b.remove(2)
+    println(b)
+    b.remove(100) //없는 값을 삭제해도 에러는 발생하지 않는다.
+    println(b)
+```
+```
+[1, 2, 3, 4]
+[1, 3, 4]
+[1, 3, 4]
+```
+### Mutable Map
+> .put(key, value), .replace(key, value), .clear()
+```
+    val c = mutableMapOf<String, Int>("one" to 1)
+    println()
+    c.put("two", 2)
+    println(c)
+    c.replace("two", 3)
+    println(c)
+    println(c.keys)
+    println(c.values)
+    c.clear() // 모든 key와 value들을 지운다
+    println(c)
+```
+
+```
 {one=1, two=2}
+{one=1, two=3}
+[one, two]
+[1, 3]
+{}
 ```
