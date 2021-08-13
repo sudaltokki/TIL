@@ -9,4 +9,5 @@
 * [06. 컬렉션](./06_collection.md) 
 * [07. 반복문](./07_iterable.md) 
 * [08. 클래스](./08_class.md)
+* [09. 변수의 접근 범위](./09_variable_range.md)
  
