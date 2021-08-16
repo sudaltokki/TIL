@@ -39,7 +39,7 @@ fun main(args: Array<String>){
 // 인터페이스도 함수를 구현할 수 있다.
 // 인터페이스에서 구현된 함수는 클래스에서 그 함수를 구현할 필요가 없다. (eat)
 // 이 기능은 반드시 구현 해야한다 : abstract (sleep, study)
-// abstract은 기능을 구현하지 않는다.
+// abstract은 인터페이스에서 기능을 구현하지 않는다.
 
 interface Person__ {
     fun eat(){
