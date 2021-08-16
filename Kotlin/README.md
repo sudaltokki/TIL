@@ -11,5 +11,8 @@
 * [08. 클래스](./08_class.md)
 * [09. 변수의 접근 범위](./09_variable_range.md)
 * [10. 접근 제어자](./10_access_modifier.md)
+* [11. 상속](./11_inherit.md)
+* [12. 인터페이스](./12_interface.md)
+* [13. 제네릭](./13_generic.md)
 
  
