@@ -13,7 +13,7 @@
 var/val 변수명 = 값
 ```
 
-`var`은 Variable을 의미, 원하는 값을 마음대로 넣을 수 있다 
+`var`은 Variable을 의미, 원하는 값을 마음대로 넣을 수 있다   
 `val`은 Value를 의미, 값을 한 번 대입하면 바꿀 수 없다
 
 ```kotlin
@@ -53,7 +53,7 @@ fun main(args:Array<String>){
 var/val 변수명: 자료형 = 값
 ```
 
-Kotlin은 자료형을 정해주지 않으면 대입한 값을 보고 자료형을 판단한다.
+Kotlin은 자료형을 정해주지 않으면 대입한 값을 보고 자료형을 판단한다.  
 > 변수를 선언할 때 자료형을 명시해주는 것을 추천
 
 ### Variable or Value?
