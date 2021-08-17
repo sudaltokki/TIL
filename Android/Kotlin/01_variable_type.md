@@ -13,8 +13,8 @@
 var/val 변수명 = 값
 ```
 
-`var`은 Variable을 의미, 원하는 값을 마음대로 넣을 수 있다   
-`val`은 Value를 의미, 값을 한 번 대입하면 바꿀 수 없다
+`var`은 Variable을 의미, 원하는 값을 마음대로 넣을 수 있다.   
+`val`은 Value를 의미, 값을 한 번 대입하면 바꿀 수 없다.
 
 ```kotlin
 package Kotlin
