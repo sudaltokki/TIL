@@ -11,6 +11,8 @@
 ![image](https://user-images.githubusercontent.com/86659995/129846511-185b898f-ae2f-4dd3-911d-d5b92c607e68.png)
 ![image](https://user-images.githubusercontent.com/86659995/129846543-1378a15f-675d-4853-9da2-188b8a22f3d0.png)
 ![image](https://user-images.githubusercontent.com/86659995/129846901-cffaa4e1-031b-40b7-9d58-767e04e40a9b.png)
+![image](https://user-images.githubusercontent.com/86659995/129849123-a7b8dc09-b7af-4a58-97cc-f45a950c9ca0.png)
+
 
 res>layout>activity_main.xml  
 위 파일 이름 바꿨으면 main activity에 들어가서 activity_main도 바꾸면 됨  
