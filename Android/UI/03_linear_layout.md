@@ -1,4 +1,4 @@
-# Linearlayout
+# Linear Layout
 > 자식 component를 수직이나 수평으로 나열하는 layout
 
 layout에 관한 component는 대부분 부모 component가 될 수 있는 component
