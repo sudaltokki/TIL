@@ -19,3 +19,4 @@ res>layout>activity_main.xml
 31은 os version  
 palette 가 view component  
 ctrl + space bar 누르면 textview가 가질 수 있는 속성을 자동완성할 수 있게 보여줌
+내가 설정한 속성들은 declared attributes에 나온다
