@@ -30,3 +30,4 @@ Android Drawble Importer라는 플러그인을 사용해 해상도별 이미지�
 
 </LinearLayout>
 ```
+![image](https://user-images.githubusercontent.com/86659995/130102073-8439aa09-a781-478c-ae1b-f6e75c565963.png)
