@@ -15,7 +15,8 @@
         android:layout_height="100dp"
         android:layout_margin="50dp"
         android:background="#FFC107" />
-
+    <!-- margin = marginTop + marginBottom + marginLeft + marginRight (padding도 마찬가지) -->
+    
     <TextView
         android:layout_width="100dp"
         android:layout_height="100dp"
