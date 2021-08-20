@@ -3,8 +3,8 @@
 직접 drawble 파일을 만들 수 있다.
 drawble 폴더 우클릭 > Drawable Resource File 눌러서 파일 생성
 
-> layout파일에도 있었던 `xmlns:android="http://schemas.android.com/apk/res/android`
-> 이 코드가 없으면 syntax error 발생
+> layout파일에도 있었던 `xmlns:android="http://schemas.android.com/apk/res/android`  
+> 이 코드가 없으면 syntax error 발생  
 > `android:layout_width="match_parent"` 와 같은 android 속성을 사용하려면 위 코드가 최상위 뷰에 항상 있어야한다
 
 ## gradient, angle, corner
