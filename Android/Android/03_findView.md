@@ -29,7 +29,7 @@ val textView: TextView = findViewById(R.id.hello)
 나는 뷰 결합을 이용해 실습을 진행했다.  
 
 ## 실습
-```xml
+```kotlin
 package com.example.app1
 
 import androidx.appcompat.app.AppCompatActivity
@@ -65,3 +65,6 @@ hello라는 텍스트를 클릭하면 Logcat에 click이라고 뜰 수 있게 �
 # 익명함수
 함수나 클래스에 이름을 붙여주는 것은 나중에 다시 불러오기 위함이다.  
 따라서 한 번만 사용하는 함수나 클래스는 이름을 붙여줄 필요가 없다.  
+
+> 뷰 결합 방식으로 작성했더니 강의에서 보여주는 익명함수 방식을 따라하는 것이 어렵다..   
+> 나중에 익명함수는 따로 공부해봐야겠다
