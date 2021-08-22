@@ -80,3 +80,5 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 ![image](https://user-images.githubusercontent.com/86659995/130347235-cf780434-bee8-405d-98ec-2599ece8602d.png)
+
+에뮬레이터를 실행시키고 하단의 Logcat에 life_cycle을 검색하면 위와 같이 log가 쓰여진 것을 확인할 수 있다.
