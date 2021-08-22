@@ -25,8 +25,7 @@ val textView: TextView = findViewById(R.id.hello)
 > 더이상 지원되지 않는 기능이라고 한다. 사용하고 싶으면 [여기](https://blog.naver.com/oklmg/222154501486)를 참고하면 된다.
 
 강의에서 2번 방식으로 실습하기 때문에 똑같이 코드를 작성하면 오류가 발생한다.  
-위의 링크를 통해 2번 기능의 플러그인을 사용하거나 [뷰 결합](https://sudaltokki.tistory.com/9)을 이용하면 된다.  
-나는 뷰 결합을 이용해 실습을 진행했다.  
+1번 방식을 사용하거나, [뷰 결합](https://sudaltokki.tistory.com/9)을 이용하면 된다.  
 
 ## 실습
 ```kotlin
@@ -37,18 +36,13 @@ import android.os.Bundle
 import android.util.Log
 import com.example.app1.databinding.ActivityListenerBinding
 
-private lateinit var binding: ActivityListenerBinding
-
 class Listener : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listener)
 
-        binding = ActivityListenerBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
-
-        binding.hello.setOnClickListener {
+        val hello: TextView = findViewById(R.id.hello)
+        hello.setOnClickListener {
             Log.d("click", "click")
         }
     }
@@ -70,7 +64,31 @@ hello라는 텍스트를 클릭하면 Logcat에 click이라고 뜰 수 있게 �
 
 # 익명함수
 함수나 클래스에 이름을 붙여주는 것은 나중에 다시 불러오기 위함이다.  
-따라서 한 번만 사용하는 함수나 클래스는 이름을 붙여줄 필요가 없다.  
+따라서 한 번만 사용하는 함수나 클래스는 이름을 붙여줄 필요가 없다. 
 
-> 뷰 결합 방식으로 작성했더니 강의에서 보여주는 익명함수 방식을 따라하는 것이 어렵다..   
-> 나중에 익명함수는 따로 공부해봐야겠다
+위에서 한 실습을 익명 함수 방식으로 다시 작성해 보자.
+
+```kotlin
+        val hello: TextView = findViewById(R.id.hello)
+        
+        // 람다 방식
+        hello.setOnClickListener {
+            Log.d("click", "click")
+        }
+
+        // 익명 함수 방식
+        hello.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                Log.d("click", "click")
+            }
+        })
+
+        // 이름이 필요한 경우(click)
+        val click = object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                Log.d("click", "click")
+            }
+        }
+```
+
+> 아직은 좀 어렵지만 위로 갈수록 더 간단한 방식이라는 것만 알아두자.
