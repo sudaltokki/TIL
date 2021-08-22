@@ -62,6 +62,12 @@ hello라는 텍스트를 클릭하면 Logcat에 click이라고 뜰 수 있게 �
 그리고 hello를 클릭할 때마다 Log에 click이라고 뜨는 것을 확인할 수 있다.  
 ![image](https://user-images.githubusercontent.com/86659995/130359952-62205a46-6016-4adf-8372-6ff53c0f5cfd.png)
 
+`OnClickListener`라는 것은 안드로이드에서 사용자의 클릭하는지 듣고 있겠다라는 뜻이다.
+여기서 해당하는 View는 TextView인 hello이다.
+
+사용자가 클릭하면 안드로이드 시스템이 listener들을 전부 찾아보고 해당되는 리스너를 호출한다.
+이때 클릭된 뷰를 it으로 넘겨준다.
+
 # 익명함수
 함수나 클래스에 이름을 붙여주는 것은 나중에 다시 불러오기 위함이다.  
 따라서 한 번만 사용하는 함수나 클래스는 이름을 붙여줄 필요가 없다.  
