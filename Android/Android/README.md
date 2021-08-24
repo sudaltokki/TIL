@@ -5,3 +5,4 @@
 * [02. Activity](./02_activity.md)
 * [03. XML 가져오기, 익명함수](./03_findView.md)
 * [04. View를 조작하는 방법](./04_setView.md)
+* [05. (과제) 덧셈 계산기](./05_calculator.md)
