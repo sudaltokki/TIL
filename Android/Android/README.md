@@ -7,3 +7,4 @@
 * [04. View를 조작하는 방법](./04_setView.md)
 * [05. (과제) 덧셈 계산기](./05_calculator.md)
 * [06. Intent](./06_intent.md)
+* [07. Task](./07_task.md)
