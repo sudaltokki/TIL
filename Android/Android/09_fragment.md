@@ -14,82 +14,22 @@
 
 ## 실습
 
+<액티비티로 파트를 나눌 때>
+```xml
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="안녕하세요"
+        android:textSize="50dp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient"/>
 ```
-<LinearLayout
-orientation = "vertical"
-<TextView
-android: layout_width = "wrap_content"
+<img src="https://user-images.githubusercontent.com/86659995/131253112-0d8295fe-cc74-464d-b01c-5ec5bd41c5c2.png" width="200" height="400"/>
 
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="200dp"
-android:background
-
-<Fragment
-android:id = "@+id" // 반드시 id줘야됨
-android: layout_width="match_parent"
-android: layout_height="300dp"
-```
-
-```
-import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.fragment.app.Fragment
-import java.util.zip.Inflater
-
-class FragmentOne : Fragment(){
-
-override fun onAttach(context: Context?){
-super.onAttach(context)
-}
-override fun onCreate(savedInstancesState: Bundle?){
-super.onCreate(savedInstancesState)
-}
-override fun onCreateView(
-inflater: LayoutInflater,
-container: ViewGroup?,
-savedInstanceState: Bundle?
-
-): View?{
-
-/*프라그먼트가 인터페이스를 처음으로 그릴때 호출된다
-* inflater -> 뷰를 그려주는 역할
-* container -> 부모뷰*/
-
-return inflater.inflate(R.layout.fragment_one,container, false)
-}
-override fun onViewCreated(view: View, savedInstanceState: Bundle?){
-super.onViewCreated(view,savedInstanceState)
-}
-
-override fun onActivityCreated(savedInstanceState: Bundle?) {
-super.onActivityCreated(savedInstanceState)
-}
-
-override fun onStart() {
-super.onStart()
-}
-
-override fun onResume() {
-super.onResume()
-}
-
-override fun onPause() {
-super.onPause()
-}
-
-override fun onStop() {
-super.onStop()
-}
-
-override fun onDestroyView() {
-super.onDestroyView()
-}
-
-override fun onDetach() {
-super.onDetach()
-}
-
-
-}
-```
+<Fragment로 파트를 나눌 때>
+com.example.app1에 Activity 'FragmentAvtivity'와 kotlin file 'FragmentOne' 생성
