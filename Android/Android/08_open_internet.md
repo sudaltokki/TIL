@@ -70,6 +70,8 @@
 ```
 
 <img src="https://user-images.githubusercontent.com/86659995/130761368-890395ee-3dbb-43b5-82e7-9eaf500c6109.png" width="200" height="400"/><img src="https://user-images.githubusercontent.com/86659995/130761414-e5f02626-f953-40b1-bad5-2fea2afe8b89.png" width="200" height="400"/>  
-> 버튼을 눌러 링크로 이동
+
+> 버튼을 눌러 링크로 이동  
+
 <img src="https://user-images.githubusercontent.com/86659995/130761224-8bdffee6-c9e2-41a9-afb3-c4d3e8f39eac.png" width="200" height="400"/><img src="https://user-images.githubusercontent.com/86659995/130761256-4bced601-affb-41d6-bfc9-cfdff4e03faf.png" width="600" height="200"/>
 > Logcat을 통해 EditText의 변화를 감지하는 함수의 작동을 확인
