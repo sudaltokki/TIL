@@ -79,10 +79,7 @@
 </섹션영역>
 
 ```
-
-`<section></section>` 안에는 콘텐츠 `<h1></h1>`, `<ul></ul>`, `<li></li>`가 있고 `<ul></ul>` 안에는 콘텐츠 `<li></li>`가 있다.
-
-이 때 `<section>`는 `<h1>`과 `<ul>`의 부모 요소이고, `<ul>`은 `<li>`의 부모 요소이다. 
+ `<section>`는 `<h1>`과 `<ul>`의 부모 요소이고, `<ul>`은 `<li>`의 부모 요소이다. 
 
 반대로 `<h1>`과 `<ul>`은 `<section>`의 자식 요소이고, `<li>`는 `<ul>`의 자식 요소이다.
 
@@ -165,9 +162,8 @@ HTML5에서는 위 2가지 형태를 다 사용할 수 있는데, XHTML 버전�
 
 DOCTYPE(DTD, Document Type Definition)은 마크업 언어에서 문서 형식을 정의
 
-웹 브라우저에 우리가 제공할 HTML 문서를 어떤 HTML 버전의 해석 방식으로 구조화하면 되는지를 알려준다.(HTML은 크게 1, 2, 3, 4, X-, 5 버전이 있다.)
-
-현재의 표준 모드는 HTML5
+웹 브라우저에 우리가 제공할 HTML 문서를 어떤 HTML 버전의 해석 방식으로 구조화하면 되는지를 알려준다.  
+HTML은 크게 1, 2, 3, 4, X-, 5 버전으로 나누어진다. (현재의 표준 모드는 HTML5)
 
 ```html
 <!-- HTML 5 -->
@@ -176,6 +172,7 @@ DOCTYPE(DTD, Document Type Definition)은 마크업 언어에서 문서 형식�
 <!-- XHTML 1.0 Transitional -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
+---
 
 ## HTML 문서의 정보
 
@@ -197,98 +194,28 @@ HTML 문서의 제목을 정의한다. 웹 브라우저의 각 사이트 탭에�
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="박지원">
-  <meta name="description" content="내 사이트가 최고!">
+  <meta name="description" content="내 사이트">
 </head>
 
 <문서의정보범위>
   <정보 문자인코딩방식="UTF-8">
   <정보 정보종류="사이트제작자" 정보값="박지원">
-  <정보 정보종류="사이트설명" 정보값="내 사이트가 최고!">
+  <정보 정보종류="사이트설명" 정보값="내 사이트">
 </문서의정보범위>
 ```
 
 | 속성 | 의미 |	값 |
 |------|------|----|
-| charset |	문자인코딩 방식 |	UTF-8, EUC-KR 등 |
+| charset |	문자인코딩 방식 (텍스트가 출력되는 방식) |	UTF-8, EUC-KR 등 |
 | name | 검색엔진 등에 제공하기 위한 정보의 종류(메타 데이터)	| author, description, keywords, viewport 등 |
 | content |	name 이나 http-equiv 속성의 값을 제공 |	
 
-`charset`은 텍스트가 출력되는 방식을 설정하는 속성이다.  
-
-`UTF-8`은 아시아권 언어에 특화된 문자인코딩 방식이다.
-
-### LINK(CSS 불러오기)
-외부 문서, 특히 CSS 문서를 불러와 연결할 때 사용, 빈 태그이다.
-
-```html
-<head>
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="icon" href="./favicon.png">
-</head>
-
-<문서의정보범위>
-  <외부문서연결 관계="CSS" 문서경로="./css/main.css">
-  <외부문서연결 관계="사이트대표아이콘" 문서경로="./favicon.png">
-</문서의정보범위>
-```
-
-| 속성 | 의미 |	값 |
-|----|----|---|
-| rel |	(필수)현재 문서와 외부 문서와의 관계를 지정 |	stylesheet, icon 등 |
-| href |	외부 문서의 위치를 지정 |	경로 |
-
-> rel = relationship (관계) , href = hyperlink (하이퍼링크)
-
-### STYLE (CSS 작성하기)
-
-CSS를 HTML 문서 내부에 작성할 때 사용
-
-```html
-<style>
-  img {
-    width: 100px;
-    height: 200px;
-  }
-  p {
-    font-size: 20px;
-    font-weight: bold;
-  }
-</style>
-
-<스타일정의>
-  <!-- CSS 코드 -->
-</스타일정의>
-```
-
-### SCRIPT (JS 불러오거나 작성하기)
-`<script></script>`로 JS를 `<link>`로 불러오거나 `<style></style>`안에 작성할 수 있다.
-
-```html
-<!-- 불러오기 -->
-<script src="./js/main.js"></script>
-
-<!-- 작성하기 -->
-<script>
-  function windowOnClickHandler(event) {
-    console.log(event);
-  }
-  window.addEventListener('click', windowOnClickHandler);
-</script>
-
-<!-- 불러오기 -->
-<자바스크립트 문서경로="./js/main.js"></자바스크립트>
-
-<!-- 작성하기 -->
-<자바스크립트>
-  <!-- JS 코드 -->
-</자바스크립트>
-```
+**UTF-8**은 아시아권 언어에 특화된 문자인코딩 방식이다.
 
 ## HTML 문서의 구
 
 ### DIV(막 쓰는 태그)
-`<div></div>`의 ‘div’는 ‘division’으로 약자로 ‘분할’을 뜻하고 문서의 부분이나 섹션을 정의한다. 
-
+**div**는 division의 약자로 ‘분할’을 뜻하고 문서의 부분이나 섹션을 정의한다.   
 단순히 특정 범위를 묶는(wrap) 용도로 사용한다. 이렇게 묶인 부분들에 CSS나 JS를 적용한다.
 
 ```html
@@ -297,10 +224,7 @@ CSS를 HTML 문서 내부에 작성할 때 사용
     <p></p>
   </div>
   <div>
-    <div>
-      <h1></h1>
       <p></p>
-    </div>
   </div>
 </body>
 
@@ -309,15 +233,14 @@ CSS를 HTML 문서 내부에 작성할 때 사용
     <p></p>
   </묶음1>
   <묶음2>
-    <묶음2-1>
-      <h1></h1>
       <p></p>
-    </묶음2-1>
   </묶음2>
 </body>
 ```
 
-### IMG(이미지 넣는 태그)
+---
+
+## IMG(이미지 넣는 태그)
 `<img>`는 HTML에 이미지를 삽입할 때 사용한다.
 
 ```html
@@ -338,14 +261,6 @@ CSS를 HTML 문서 내부에 작성할 때 사용
 `src`, `alt`은 `<img>`를 사용할 때 반드시 포함되어야 할 속성이다.
 
 만약 속성이 누락되었다면 이는 웹 표준에 어긋난다.
-
-## 웹 표준 검사하기
-
-[W3C validator](https://validator.w3.org/#validate_by_upload)에 접속해  HTML 문서가 표준에 부합하는지 테스트를 해볼 수 있다.
-
-![https://heropy.blog/images/screenshot/html-css-starter/markup%20_validation_result_image_kytty.jpg](https://heropy.blog/images/screenshot/html-css-starter/markup%20_validation_result_image_kytty.jpg)
-
-위에서 `<img src="./kitty.png">`라고 작성했을 때 나오는 결과이다. 
 
 ## HTML 예제
 
@@ -387,8 +302,7 @@ CSS를 HTML 문서 내부에 작성할 때 사용
 * 수직으로 쌓인다.
 * 줄바꿈을 해도 띄어쓰기가 적용되지 않는다.
 * margin, padding 위, 아래, 좌, 우 모두 사용 가능하다.
-* `display: inline;` 블록 요소를 인라인 요소로 바꿀 수 있다.  
-  (기본값은 `display: block;`)
+* `display: inline;`코드를 입력하면 블록 요소를 인라인 요소로 바꿀 수 있다.(기본값은 `display: block;`)
 
 ### 인라인 요소
 
@@ -400,7 +314,83 @@ CSS를 HTML 문서 내부에 작성할 때 사용
 * 줄바꿈을 할 때마다 띄어쓰기가 적용된다.
 * margin, padding 위, 아래는 사용을 할 수 없다.  
   (padding은 시각적으로는 확인이 가능하지만, 실질적인 거리를 만들어내지는 못한다.)
-* `display: block;` 인라인 요소를 블록 요소로 바꿀 수 있다.  
-  (기본값은 `display: inline;`)
+* `display: block;`코드를 통해 인라인 요소를 블록 요소로 바꿀 수 있다. (기본값은 `display: inline;`)
 
 > 두 요소 모두 기본값은 `width: auto;` `height: auto;`로 설정이 되어있지만, auto가 적용되는 방식이 다르다.
+
+---
+
+## LINK (CSS 불러오기)
+외부 문서, 특히 CSS 문서를 불러와 연결할 때 사용, 빈 태그이다.
+
+```html
+<head>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="./favicon.png">
+</head>
+
+<문서의정보범위>
+  <외부문서연결 관계="CSS" 문서경로="./css/main.css">
+  <외부문서연결 관계="사이트대표아이콘" 문서경로="./favicon.png">
+</문서의정보범위>
+```
+
+| 속성 | 의미 |	값 |
+|----|----|---|
+| rel |	(필수)현재 문서와 외부 문서와의 관계를 지정 |	stylesheet, icon 등 |
+| href |	외부 문서의 위치를 지정 |	경로 |
+
+> rel = relationship (관계) , href = hyperlink (하이퍼링크)
+
+## STYLE (CSS 작성하기)
+
+CSS를 HTML 문서 내부에 작성할 때 사용
+
+```html
+<style>
+  img {
+    width: 100px;
+    height: 200px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+
+<스타일정의>
+  <!-- CSS 코드 -->
+</스타일정의>
+```
+
+## SCRIPT (JS 불러오거나 작성하기)
+`<script></script>`로 JS를 `<link>`로 불러오거나 `<style></style>`안에 작성할 수 있다.
+
+```html
+<!-- 불러오기 -->
+<script src="./js/main.js"></script>
+
+<!-- 작성하기 -->
+<script>
+  function windowOnClickHandler(event) {
+    console.log(event);
+  }
+  window.addEventListener('click', windowOnClickHandler);
+</script>
+
+<!-- 불러오기 -->
+<자바스크립트 문서경로="./js/main.js"></자바스크립트>
+
+<!-- 작성하기 -->
+<자바스크립트>
+  <!-- JS 코드 -->
+</자바스크립트>
+```
+
+## 웹 표준 검사하기
+
+[W3C validator](https://validator.w3.org/#validate_by_upload)에 접속해  HTML 문서가 표준에 부합하는지 테스트를 해볼 수 있다.
+
+![https://heropy.blog/images/screenshot/html-css-starter/markup%20_validation_result_image_kytty.jpg](https://heropy.blog/images/screenshot/html-css-starter/markup%20_validation_result_image_kytty.jpg)
+
+위에서 `<img src="./kitty.png">`라고 작성했을 때 나오는 결과이다. 
