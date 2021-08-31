@@ -1,12 +1,3 @@
-# lateinit
-초기화를 나중에 하겠다는 의미
-초기값을 세팅하지 않은 상태에서 호출을 하면 에러가 발생한다 (**UninitializedPropertyAccessException**)
-
-init : 초기값 세팅 (initialize)    
-late : 나중에  
-
----
-
 # Null Safety
 > 코틀린의 특징, Null에 대해서 안전하다
 
@@ -102,3 +93,34 @@ class NullSafety : AppCompatActivity() {
 }
 ```
 ![image](https://user-images.githubusercontent.com/86659995/131461102-7ca064da-f0a6-4fb5-ab2a-d1b3110655f7.png)
+
+---
+
+# lateinit
+초기화를 나중에 하겠다는 의미
+초기값을 세팅하지 않은 상태에서 호출을 하면 에러가 발생한다 (**UninitializedPropertyAccessException**)
+
+init : 초기값 세팅 (initialize)    
+late : 나중에  
+
+## 실습
+```kotlin
+class NullSafety : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+       .
+       .
+       .
+        class Car5(var number: Int){
+
+        }
+
+        lateinit var lateCar: Car5
+
+        lateCar = Car5(10)
+        Log.d("number", "late number: " + lateCar.number)
+    }
+}
+```
+![image](https://user-images.githubusercontent.com/86659995/131462913-0f9ea62d-9114-44d6-a08e-9363af4893f0.png)
+
+> lateinit은 반드시 나중에 초기화가 되는 것을 확인해야한다.
