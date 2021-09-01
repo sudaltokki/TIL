@@ -4,6 +4,9 @@
 
 > 빈 태그(Empty Tags)는 <TAG />와 같이 /를 포함하여 표시
 
+## \<head>
+웹 브라우저가 해석해야 할 HTML 문서의 정보 범위를 지정
+
 ```html
 <head>
     <meta charset="UTF-8">
@@ -110,4 +113,7 @@ HTML 문서에 포함된 모든 상대 URL들의 기준 URL를 설정
 | http-equiv | 서버/사용자 에이전트의 작동방식 변경에 대한 지시(HTTP 응답 헤더 제공) |	refresh, X-UA-Compatible… |
 | content |	name, http-equiv의 값 |
   
-**UTF-8**은 아시아권 언어에 특화된 문자인코딩 방식이다.
+> charset = character set    
+> **UTF-8**은 아시아권 언어에 특화된 문자인코딩 방식이다.
+> EUC-KR도 한글을 나타내는 문자 인코딩 방식, 둘이 한글을 만드는 방식에 차이가 있다.
+> Title보다 문자 인코딩 방식을 먼저 설정하는 것이 좋다.
