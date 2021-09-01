@@ -1,7 +1,7 @@
 # HEAD 태그
 > HTML 문서의 정보
 
-### TITLE (웹 페이지의 제목)
+## TITLE (웹 페이지의 제목)
 HTML 문서의 제목을 정의한다. 웹 브라우저의 각 사이트 탭에서 이름으로 표시된다.
 
 <img src="https://heropy.blog/images/screenshot/html-css-starter/browser_tabs.jpg" width="800" height="50"/>
@@ -12,7 +12,7 @@ HTML 문서의 제목을 정의한다. 웹 브라우저의 각 사이트 탭에�
 </head>
 ```
 
-### META(웹 페이지의 정보)
+## META DATA (웹 페이지의 정보)
 웹페이지에 관한 정보(표시 방식, 제작자, 내용, 키워드 등)를 검색엔진이나 브라우저에 제공한다. 빈(Empty) 태그이다.
 
 ```html
