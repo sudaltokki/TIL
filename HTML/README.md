@@ -4,8 +4,9 @@
 
 ### 개요
 * [1. 기본 문법](./01_basic_grammer.md)
-* [2. HTML 문서의 범위](./02_range.md)
-* [3. HEAD 태그와 메타데이터](./03_headtag.md)
-* [4. BODY 태그](./04_bodytag.md)
+* [2. 블록, 인라인](./02_block_inline.md)
+* [3. HTML 문서의 범위](./03_range.md)
+* [4. HEAD 태그와 메타데이터](./04_headtag.md)
+* [5. BODY 태그](./05_bodytag.md)
 
 ### 요소
