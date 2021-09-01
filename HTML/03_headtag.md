@@ -87,7 +87,7 @@ HTML 문서에 포함된 모든 상대 URL들의 기준 URL를 설정
 |target| A 요소처럼 target 속성을 사용하는 요소의 기본값 |	_self, _blank | _self |
 
 ## \<meta />
-\<meta /> 요소는 \<base>, \<link>, \<script>, \<style>, \<title>과 같은 다른 메타데이터 요소로 나타낼 수 없는 메타데이터를 나타낸다.
+\<meta> 요소는 \<base>, \<link>, \<script>, \<style>, \<title>과 같은 다른 메타데이터 요소로 나타낼 수 없는 메타데이터를 나타낸다.
 
 ```html
 <head>
