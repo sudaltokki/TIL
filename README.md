@@ -1,9 +1,8 @@
 # Today I Learned
 
 ### HTML&CSS
-* [HTML 개요](./HTML/html_summary.md)
-* [HTML 요소](./HTML/html_element.md)
-* [CSS 개요](./CSS/css_summary.md)
+* [HTML](./HTML)
+* [CSS](./CSS)
 
 ### Android
 * [안드로이드 앱 개발 유치원](./Android/android_basic.md)
