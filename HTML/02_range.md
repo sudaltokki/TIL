@@ -38,20 +38,23 @@
 ```
 
 ## HTML(전체 범위)
-
-`<html>`는 HTML 문서의 전체 범위를 지정
-
+`<html>`는 HTML 문서의 전체 범위를 지정  
 웹 브라우저가 해석해야 할 HTML 문서가 어디에서 시작하며, 어디에서 끝나는지 알려주는 역할
+```html
+<html lang="국가 언어">
+  .
+  .
+  .
+</html>
+```
 
 ### 국가 언어 설정
-```html
-<html lang="국가 언어"></html>
-```
+
 |속성 | 의미 | 값 |
 |-----|------|----|
 | lang | 문서의 언어 |	ko, en…|
 
-[ISO 639-1 코드 목록](https://ko.wikipedia.org/wiki/ISO_639-1_%EC%BD%94%EB%93%9C_%EB%AA%A9%EB%A1%9D)  
+[ISO 639-1 코드 목록](https://ko.wikipedia.org/wiki/ISO_639-1_%EC%BD%94%EB%93%9C_%EB%AA%A9%EB%A1%9D) 
 
 ## HEAD(정보 범위)
 
