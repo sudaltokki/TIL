@@ -155,7 +155,7 @@ FragmentOne 파일과 fragment_one.xml 파일은 동일
         Log.d("life_cycle", "F onActivityCreated")
 
         val data = arguments?.getString("hello")
-        Log.d("data", "data")
+        Log.d("data", "" + data)
 
 
         super.onActivityCreated(savedInstanceState)
