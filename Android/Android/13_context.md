@@ -1,10 +1,11 @@
 # Context
 
+응용 프로그램 환경의 글로벌 정보에 대한 인터페이스, 안드로이드 시스템에 의해 구현되는 추상 클래스  
 **ActivityManagerService**에 접근 하도록 해주는 역할, 주변정보    
 > ActivityManagerService는 개발하기 편하도록 미리 구현 해놓은 기능을 말한다.  
 
-안드로이드에 만들어져 있는 많은 기능을 사용하기 위해서는 Context가 필요한 경우가 많다.  
-우리가 항상 Activity를 만들때 자동으로 상속받는 AppCompatActivity의 뿌리가 Context이다.
+Context를 통해 앱에 특화된 리소스나 클래스에 접근할 수 있다. ex) Activity 실행, intent 수신 등과 같은 응용 프로그램 수준의 작업  
+우리가 항상 Activity를 만들때 자동으로 상속받는 AppCompatActivity의 뿌리도 Context이다.
 
 ### 종류
 * Activity의 context : Activity의 주변정보  
