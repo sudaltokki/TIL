@@ -49,14 +49,16 @@ class Listener : AppCompatActivity() {
 }
 ```
 hello라는 텍스트를 클릭하면 Logcat에 click이라고 뜰 수 있게 코드를 작성했다.   
-그 다음 앱을 실행하면 activity_listener.xml을 실행시킬 수 있도록 Manifests에서 launcher가 들어있는 코드를 옮겨준다.  
+그 다음, 앱을 실행하면 activity_listener.xml을 실행시킬 수 있도록 Manifests에서 launcher가 들어있는 코드 `<intent-filter>`를   
+android:name이 Listener인 Activity로 옮겨준다.  
+
 ![tempsnip](https://user-images.githubusercontent.com/86659995/130360043-0027eb62-e2ed-4a37-bd72-d12f064c4c3a.png)
 
 그리고 앱을 실행시키면 activity_listener.xml에 작성한 layout이 보인다.  
 그리고 hello를 클릭할 때마다 Log에 click이라고 뜨는 것을 확인할 수 있다.  
 ![image](https://user-images.githubusercontent.com/86659995/130359952-62205a46-6016-4adf-8372-6ff53c0f5cfd.png)
 
-`OnClickListener`라는 것은 안드로이드에서 사용자의 클릭하는지 듣고 있겠다라는 뜻이다.
+`OnClickListener`라는 것은 안드로이드에서 사용자의 클릭하는지 듣고 있겠다라는 뜻이다.  
 여기서 해당하는 View는 TextView인 hello이다.
 
 사용자가 클릭하면 안드로이드 시스템이 listener들을 전부 찾아보고 해당되는 리스너를 호출한다.
