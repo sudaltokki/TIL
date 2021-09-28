@@ -1,19 +1,14 @@
 # Thread
 > 작업흐름
 
-앱실행 ----> launcher Activity ---->  작업흐름
-
-### 안드로이드의 쓰레드
-->MainThread  
-->launcher Activity  
-->Activity B  
-->영상재생  
+앱실행 ----> Launcher Activity ---->  작업흐름  
+중심이 되는 MainThread가 흘러가는 동안 Launcher Activity나 다른 Activity들이 실행이된다.  
 
 ### 안드로이드 MainThrea의 특징
 - UI(User Interface) Thread
 - 사용자의 input을 받는 쓰레드
-- 절대 정지시킬 수 없다(하면 안된다)
-- 왜냐하면 정지 시키거나 종료 시키면 더 이상 사용자의 input을 받을 수 없기 때문에
+- 정지시키거나 종료시키면 더 이상 사용자의 input을 받을 수 없기 때문에 절대 정지시킬 수 없다   
+  (App이 crash되기 때문에 하면 안된다)
 
 
 ## 실습
@@ -62,3 +57,5 @@ button.setBackgroundColor(getColor(R.color.textview_color))
 ```
 
 
+![image](https://user-images.githubusercontent.com/86659995/135127181-5ce77cf3-ffd2-4c55-ab47-1fcd6196f258.png)
+![image](https://user-images.githubusercontent.com/86659995/135128480-e843d759-f5f1-47ec-af7f-81677d440186.png)
